@@ -1,0 +1,17 @@
+@import "Style.css";
+
+.affix ul > li > a {
+    padding: 0px 10px;
+    color: #666666;
+    display: inline-flex;
+}
+
+.bs-docs-sidebar ul {
+    list-style-type: none;
+    counter-reset: css-counters 0; /* intializes counter, set -1 for zero-based counters */
+}
+
+    .bs-docs-sidebar ul li:before {
+        counter-increment: css-counters;
+        content: counters(css-counters, ".") " "; /* generates inherited counters from parents */
+    }
